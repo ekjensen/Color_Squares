@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Color Squares</title>
+    
+    <style>
+          
+          body, div {
+            background-color: whitesmoke;
+          }
+        
+        .wrapper {
+            display: block;
+            width: 500px;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0px;  
+            margin: 0px;
+            padding: 0px;
+            line-height: 0px;
+            letter-spacing: 0px;
+        }
+        
+        .mydiv {     
+            width: 100px;
+            height: 100px;
+            position:relative;          
+            z-index: 1;
+            display:inline-block;
+            background-color:lightgrey;                
+        }
+        
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;    
+        }       
+    </style>
+
+    <script>     
+        function randomcolor()
+        {
+            var r = Math.floor(Math.random() * 255);
+            var g = Math.floor(Math.random() * 255);
+            var b = Math.floor(Math.random() * 255);
+            color = "rgb("+r+","+g+","+b+")";
+        }
+        
+        function changecolor(whatdiv)
+        {
+            randomcolor();
+            console.log(color);
+            document.getElementById(whatdiv).style.backgroundColor = color;
+        }   
+    </script>
+</head>
+
+<body>
+<div>
+    
+    <h1>Mouse over the box for a colorful surprise!</h1>
+
+    <div class=wrapper>     
+        <div>  
+            <div class="mydiv" id="adiv" onmouseover="changecolor('adiv')"></div>
+            <div class="mydiv" id="bdiv" onmouseover="changecolor('bdiv')"></div>
+            <div class="mydiv" id="cdiv" onmouseover="changecolor('cdiv')"></div>
+            <div class="mydiv" id="ddiv" onmouseover="changecolor('ddiv')"></div>
+            <div class="mydiv" id="ediv" onmouseover="changecolor('ediv')"></div>
+        </div>
+
+        <div>
+            <div class="mydiv" id="fdiv" onmouseover="changecolor('fdiv')"></div>
+            <div class="mydiv" id="gdiv" onmouseover="changecolor('gdiv')"></div>
+            <div class="mydiv" id="hdiv" onmouseover="changecolor('hdiv')"></div>
+            <div class="mydiv" id="idiv" onmouseover="changecolor('idiv')"></div>
+            <div class="mydiv" id="jdiv" onmouseover="changecolor('jdiv')"></div>
+        </div>
+        
+        <div>
+            <div class="mydiv" id="kdiv" onmouseover="changecolor('kdiv')"></div>
+            <div class="mydiv" id="ldiv" onmouseover="changecolor('ldiv')"></div>
+            <div class="mydiv" id="mdiv" onmouseover="changecolor('mdiv')"></div>
+            <div class="mydiv" id="ndiv" onmouseover="changecolor('ndiv')"></div>
+            <div class="mydiv" id="odiv" onmouseover="changecolor('odiv')"></div>
+        </div>
+        
+        <div>
+            <div class="mydiv" id="pdiv" onmouseover="changecolor('pdiv')"></div>
+            <div class="mydiv" id="qdiv" onmouseover="changecolor('qdiv')"></div>
+            <div class="mydiv" id="rdiv" onmouseover="changecolor('rdiv')"></div>
+            <div class="mydiv" id="sdiv" onmouseover="changecolor('sdiv')"></div>
+            <div class="mydiv" id="tdiv" onmouseover="changecolor('tdiv')"></div>
+        </div>
+        
+        <div>
+            <div class="mydiv" id="udiv" onmouseover="changecolor('udiv')"></div>
+            <div class="mydiv" id="vdiv" onmouseover="changecolor('vdiv')"></div>
+            <div class="mydiv" id="wdiv" onmouseover="changecolor('wdiv')"></div>
+            <div class="mydiv" id="xdiv" onmouseover="changecolor('xdiv')"></div>
+            <div class="mydiv" id="ydiv" onmouseover="changecolor('ydiv')"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
