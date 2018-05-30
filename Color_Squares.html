@@ -43,17 +43,19 @@
     </style>
 
     <script>     
+
         function randomcolor()
         {
-            var r = Math.floor(Math.random() * 255);
-            var g = Math.floor(Math.random() * 255);
-            var b = Math.floor(Math.random() * 255);
-            color = "rgb("+r+","+g+","+b+")";
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            const color = "rgb("+r+","+g+","+b+")";
+            return color;
         }
         
         function changecolor(whatdiv)
         {
-            randomcolor();
+            const color = randomcolor();
             console.log(color);
             document.getElementById(whatdiv).style.backgroundColor = color;
         }   
